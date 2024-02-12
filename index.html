@@ -13,41 +13,85 @@
 
     <!-- main css file -->
     <link rel="stylesheet" href="style.css" />
-
-    <!-- utility class flex -->
-    <link rel="stylesheet" href="./utility classes css/flex.css" />
   </head>
   <body>
-    <div class="nav-bar sticky">
-      <div class="logo">
-        <!-- Example logo -->
-        <span class="material-symbols-outlined"> flutter </span>
-        <h3>Kibu</h3>
-      </div>
+    <nav>
+      <div class="nav-bar sticky">
+        <div class="logo">
+          <!-- Example logo -->
+          <span class="material-symbols-outlined pointer"> flutter </span>
+          <h3 class="pointer">Kibu</h3>
+        </div>
 
-      <div class="shortcut">
-        <ul>
-          <li>Home</li>
-          <li>Category</li>
-          <li>About Us</li>
-          <li>Contect</li>
-          <li>Downloads</li>
-        </ul>
-      </div>
+        <div class="shortcut">
+          <ul class="nav-ul">
+            <li class="pointer">Home</li>
+            <li class="pointer">Category</li>
+            <li class="pointer">About Us</li>
+            <li class="pointer">Contect</li>
+            <li class="pointer">Downloads</li>
+          </ul>
+        </div>
 
-      <div class="user">
-        <div class="login-div">Login</div>
-        <div class="profile-div">
-          <span class="material-symbols-outlined"> person </span>
+        <div class="user">
+          <div class="login-div pointer">Login</div>
+          <div class="profile-div pointer">
+            <span class="material-symbols-outlined"> person </span>
+          </div>
         </div>
       </div>
-    </div>
+    </nav>
 
-    <div class="breake"></div>
+    <div class="break"></div>
 
     <div class="main-div">
-      <div class="sidebar"></div>
-      <div class="content-area"></div>
+      <div class="sidebar">
+        <ul class="sidebar-ul">
+          <li class="flex aline-center sidebar-li pointer">
+            <span class="material-symbols-outlined"> upload </span
+            ><span>Upload</span>
+          </li >
+          <li class="flex aline-center sidebar-li pointer">
+            <span class="material-symbols-outlined"> download </span>Downloads
+          </li >
+          <li class="flex aline-center sidebar-li pointer">
+            <span class="material-symbols-outlined">
+              local_fire_department </span
+            ><span>Trending</span>
+          </li >
+          <li class="flex aline-center sidebar-li pointer">
+            <span class="material-symbols-outlined"> favorite </span
+            ><span>Liked</span>
+          </li >
+          <li class="flex aline-center sidebar-li pointer">
+            <span class="material-symbols-outlined"> image </span
+            ><span>Images</span>
+          </li >
+          <li class="flex aline-center sidebar-li pointer">
+            <span class="material-symbols-outlined"> smart_display </span
+            ><span>Videos</span>
+          </li >
+          <li class="flex aline-center sidebar-li pointer">
+            <span class="material-symbols-outlined"> gif_box </span
+            ><span>GIFs</span>
+          </li >
+
+          <li class="flex aline-center sidebar-li pointer">
+            <span class="material-symbols-outlined"> folder </span
+            ><span>Collections</span>
+          </li >
+        </ul>
+
+        <div class="upload-button">
+          <button class=" button-style pointer">Upload</button>
+        </div>
+      </div>
+
+
+
+
+
+      <div class="contant-area">contant area</div>
     </div>
   </body>
 </html>
