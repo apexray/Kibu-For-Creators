@@ -39,6 +39,9 @@
   align-items: center;
   top: 0;
   height: 65px;
+  border-bottom: 2px solid rgb(226, 225, 225);
+  z-index: 10;
+  background-color: white;
 }
 
 .logo{
@@ -86,18 +89,12 @@
   border-radius: 15px;
 }
 
-/* line break */
-.break{
-  margin-top: 66px;
-  height: 2px;
-  background-color:  rgb(226, 225, 225);
-  width: 100%;
-}
-
 
 /* main css */
 .main-div{
   display: flex;
+  align-items: start;
+  margin-top: 66px;
 }
 
 
@@ -105,8 +102,9 @@
 .sidebar{
   width: 30%;
   padding: 40px;
-  height: 90.7vh;
-  position: sticky;
+  height: 100dvh;
+  position: fixed;
+  z-index: 5;
 }
 
 .sidebar-ul{
@@ -148,6 +146,8 @@ margin-top: 185px;
 
 
 /* contant area css */
-.contant-area{
+.content-area{
   width: 100%;
+  z-index: 0;
+  margin-left: 30%;
 }
