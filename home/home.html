@@ -12,7 +12,12 @@
     />
 
     <!-- main css file -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- home page css -->
+    <link rel="stylesheet" href="home.css" />
+
+    <script src="home.js"></script>
   </head>
   <body>
     <nav>
@@ -25,11 +30,11 @@
 
         <div class="shortcut">
           <ul class="nav-ul">
-            <li class="pointer">Home</li>
-            <li class="pointer">Category</li>
-            <li class="pointer">About Us</li>
-            <li class="pointer">Contect</li>
-            <li class="pointer">Downloads</li>
+            <li class="pointer"><a href="./home.html">Home</a></li>
+            <li class="pointer"><a href="#">Category</a></li>
+            <li class="pointer"><a href="../AboutUS/AboutUs.html">About Us</a></li>
+            <li class="pointer"><a href="#">Contect</a></li>
+            <li class="pointer"><a href="#">Downloads</a></li>
           </ul>
         </div>
 
@@ -86,6 +91,38 @@
       </div>
 
       <div class="content-area">
+        <div class="search-bar">
+          <div class="search-icon">
+            <span class="material-symbols-outlined search-logo pointer">
+              search
+            </span>
+          </div>
+          <form >
+            <input
+              type="text"
+              placeholder="Search for images,videos and more..."
+            />
+          </form>
+        </div>
+
+        <div class="trending-area"><h1>Trending Searches</h1></div>
+
+        <div class="trending-ul">
+          <ul>
+            <li class="pointer">Female</li>
+            <li class="pointer">Male</li>
+            <li class="pointer">Nature</li>
+            <li class="pointer">City</li>
+            <li class="pointer">Food</li>
+            <li class="pointer">Travel</li>
+            <li class="pointer">Art</li>
+            <li class="pointer">Business</li>
+            <li class="pointer">Fitness</li>
+            <li class="pointer">Technology</li>
+          </ul>
+        </div>
+
+        <div class="img-content"></div>
       </div>
     </div>
   </body>
