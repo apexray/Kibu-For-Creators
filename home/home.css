@@ -12,9 +12,6 @@
   color: #777777;
 }
 
-form{
-  width: 100%;
-}
 
 input{
   width: 100%;
@@ -46,7 +43,8 @@ input{
   border-radius: 15px;
   font-weight: 500;
 }
-.img-content{
+
+.search-results{
   display: flex;
   /* justify-content: space-around; */
   flex-wrap: wrap;

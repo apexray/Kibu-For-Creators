@@ -3,7 +3,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Kibu</title>
 
     <!-- google icon css link -->
@@ -15,8 +14,9 @@
     <!-- main css file -->
     <link rel="stylesheet" href="../style.css" />
 
-    <!-- home page css -->
-    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="./Login.css">
+
+    <link rel="stylesheet" href="contectUs.css">
   </head>
   <body>
     <nav>
@@ -29,15 +29,11 @@
 
         <div class="shortcut">
           <ul class="nav-ul">
-            <li class="pointer"><a href="./home.html">Home</a></li>
-            <li class="pointer"><a href="#">Category</a></li>
-            <li class="pointer">
-              <a href="../AboutUS/AboutUs.html">About Us</a>
-            </li>
-            <li class="pointer">
-              <a href="../contectUs/contectUs.html">Contect</a>
-            </li>
-            <li class="pointer"><a href="#">Downloads</a></li>
+            <li class="pointer">Home</li>
+            <li class="pointer">Category</li>
+            <li class="pointer">About Us</li>
+            <li class="pointer">Contect</li>
+            <li class="pointer">Downloads</li>
           </ul>
         </div>
 
@@ -94,42 +90,18 @@
       </div>
 
       <div class="content-area">
-        <div class="search-bar">
-          <div class="search-icon">
-            <span class="material-symbols-outlined search-logo pointer">
-              search
-            </span>
+        <h1>Login</h1>
+        <form action="">
+          <label for="name" >Username</label>
+          <input id="name"   type="text" placeholder="Enter your username">
+          <label for="email">Password</label>
+          <input id="email" type="text" placeholder="Enter your password">
+          <a class="blue-ancre" href="#">Forgot your password? Reset it</a>
+          <button id="button2">Login</button>
+          <div class="register">
+            <a class="blue-ancre" href="#">Don't have an account? Register</a>
           </div>
-          <form>
-            <input id="input-search"
-              type="text"
-              placeholder="Search for images,videos and more..."
-            />
-          </form>
-        </div>
-
-        <!-- form script -->
-        <script src="home.js"></script>
-
-        <div class="trending-area"><h1>Trending Searches</h1></div>
-
-        <div class="trending-ul">
-          <ul>
-            <li class="pointer">Female</li>
-            <li class="pointer">Male</li>
-            <li class="pointer">Nature</li>
-            <li class="pointer">City</li>
-            <li class="pointer">Food</li>
-            <li class="pointer">Travel</li>
-            <li class="pointer">Art</li>
-            <li class="pointer">Business</li>
-            <li class="pointer">Fitness</li>
-            <li class="pointer">Technology</li>
-          </ul>
-        </div>
-
-        <div class="search-results"></div>
-
+        </form>
       </div>
     </div>
   </body>
