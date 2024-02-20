@@ -37,7 +37,11 @@ p{
 .contect-button{
   display: flex;
   justify-content: end;
-  width: 50%;
+  width: 15%;
+}
+
+.contect-button button:hover{
+  background-color: rgb(206, 206, 206);
 }
 
 .contect-button button{
