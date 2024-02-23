@@ -1,48 +1,63 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-  const accessKey = "3z9gjKG25ngHtYfefPapI0E98TiIDvQ881RfuPt5cuQ";
+  const accessKey = "vXOkxXWRK9pfBCu62ce6sZLXHBv0GVO8DMVmzvDPKGRcIvm9i7nTAZRv";
 
-const formElm = document.querySelector('form');
-const inputElm = document.querySelector('#input-search');
-const searchResults = document.querySelector('.search-results');
+  const formElm = document.querySelector('form');
+  const inputElm = document.querySelector('#input-search');
+  const searchResults = document.querySelector('.search-results');
 
 
-let inputData = "";
-let page = 1;
+  let inputData = "";
+  let page = 1;
 
-async function searchImages() {
-  inputData = inputElm.value;
+  async function searchVideos() {
+    inputData = inputElm.value;
 
-  const perPage = 100; // Set the number of images per page
-  const url = `https://api.unsplash.com/search/photos?page=${page}&query=${inputData}&per_page=${perPage}&client_id=${accessKey}`;
+    const perPage = 10; // Set the number of videos per page
+    const url = `https://api.pexels.com/videos/search?query=${inputData}&per_page=${perPage}&page=${page}`;
 
-  const response = await fetch(url);
-  const data = await response.json();
+    const response = await fetch(url, {
+      headers: {
+        Authorization: accessKey,
+      },
+    });
+    const data = await response.json();
 
-  const results = data.results;
+    const results = data.videos;
 
-  if (page === 1) {
-    searchResults.innerHTML = "";
+    if (page === 1) {
+      searchResults.innerHTML = "";
+    }
+
+    results.map((result) => {
+      const videoWrapper = document.createElement('div');
+      videoWrapper.classList.add('video-box');
+
+      const video = document.createElement('video');
+      video.src = result.video_files[0].link;
+      video.setAttribute('loop',true)
+      video.setAttribute('muted',true)
+
+      // Add event listeners to play/pause video
+      video.addEventListener('mouseenter', () => {
+        video.play();
+      });
+
+      video.addEventListener('mouseleave', () => {
+        video.pause();
+      });
+
+      videoWrapper.appendChild(video);
+      searchResults.appendChild(videoWrapper);
+    });
+
+    page++;
   }
 
-  results.forEach((result) => {
-    const imageWrapper = document.createElement('div');
-    imageWrapper.classList.add('img-box');
 
-    const image = document.createElement('img');
-    image.src = result.urls.small;
-
-    imageWrapper.appendChild(image);
-    searchResults.appendChild(imageWrapper);
+  formElm.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    page = 1;
+    searchVideos();
   });
-
-  page++;
-}
-
-
-formElm.addEventListener('submit',(event)=>{
-  event.preventDefault();
-  page = 1;
-  searchImages();
-});
 });
