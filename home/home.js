@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   async function searchVideos(inputData) {
-    const perPage = 10; // Set the number of videos per page
+    const perPage = 50; // Set the number of videos per page
     const url = `https://api.pexels.com/videos/search?query=${inputData}&per_page=${perPage}&page=${page}`;
 
     const response = await fetch(url, {
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   async function searchImages(inputData) {
-    const perPage = 10; // Set the number of images per page
+    const perPage = 50; // Set the number of images per page
     const url = `https://api.pexels.com/v1/search?query=${inputData}&per_page=${perPage}&page=${page}`;
 
     const response = await fetch(url, {

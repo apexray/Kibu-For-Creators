@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,8 +16,8 @@
     <!-- main css file -->
     <link rel="stylesheet" href="../style.css" />
 
-    <!-- Upload page css file -->
-    <link rel="stylesheet" href="upload.css">
+    <!-- home page css -->
+    <link rel="stylesheet" href="home.css" />
   </head>
   <body>
     <nav>
@@ -29,18 +30,14 @@
 
         <div class="shortcut">
           <ul class="nav-ul">
-            <li class="pointer">
-              <a href="../home/index.html">Home</a></li>
+            <li class="pointer"><a href="./home.html">Home</a></li>
+            <li class="pointer"><a href="#">Category</a></li>
             <li class="pointer">
               <a href="../AboutUS/AboutUs.html">About Us</a>
             </li>
             <li class="pointer">
               <a href="../contectUs/contectUs.html">Contect</a>
             </li>
-            <li class="pointer">
-              <a href="../upload/upload.html">Upload</a>
-            </li>
-            
             <li class="pointer"><a href="#">Downloads</a></li>
           </ul>
         </div>
@@ -98,39 +95,48 @@
       </div>
 
       <div class="content-area">
-        <div class="upload">
-          <h1>Upload</h1>
-        </div>
-        <div class="upload-para">
-          <p>You can upload your images and videos here. We support most file formats including JPEG,PNG,MP4, and MOV.</p>
-        </div>
-        <div class="upload-area">
-          <div class="upload-type">
-            <div class="upload-logo">
-              <span class=" saturate material-symbols-outlined">
-                package_2
-                </span>
-              </div>
-              <div class="upload-text"><div class="drag-drop"><p class="drag-text">Drag and Drop</p></div>
-              <div class="drag-drop-text"><p>Simply drag your file into the designated area for a quick upload.</p></div>
-            </div>
-              
-             
+        <div class="search-bar">
+          <div class="search-icon">
+            <span class="material-symbols-outlined search-logo pointer">
+              search
+            </span>
           </div>
-          <div class="upload-type">
-            <div class="upload-logo">
-              <span class=" saturate material-symbols-outlined">
-                package_2
-                </span>
-              </div>
-              <div class="upload-text"><div class="drag-drop"><p class="drag-text">File Selection</p></div>
-              <div class="drag-drop-text"><p>You can also click the 'Browse' button to select file from your device.</p></div>
-            </div>
-          </div>
-          <div>
-            <button id="button" class="pointer">Browse Files</button>
-          </div>
+          <form>
+            <input
+              id="input-search"
+              type="text"
+              placeholder="Search for images,videos and more..."
+            />
+          </form>
         </div>
+
+        <!-- form script -->
+        <script src="home.js"></script>
+
+        <div class="trending-area"><h1>Trending Searches</h1></div>
+
+        <div class="trending-ul">
+          <ul>
+            <li class="pointer">Female</li>
+            <li class="pointer">Male</li>
+            <li class="pointer">Nature</li>
+            <li class="pointer">City</li>
+            <li class="pointer">Food</li>
+            <li class="pointer">Travel</li>
+            <li class="pointer">Art</li>
+            <li class="pointer">Business</li>
+            <li class="pointer">Fitness</li>
+            <li class="pointer">Technology</li>
+          </ul>
+        </div>
+        <div class="break"></div>
+        <div class="image-video-selector">
+          <p class="images pointer">Images</p>
+          <p class="videos pointer">videos</p>
+        </div>
+
+        <div class="search-results"></div>
+      </div>
     </div>
   </body>
 </html>

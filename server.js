@@ -22,7 +22,7 @@ app.engine(
 
 //routes
 app.get("/", (req, res) => {
-  res.send("<h1>express server is started</h1>");
+  res.render('main')
 });
 
 app.listen(3000, () =>
